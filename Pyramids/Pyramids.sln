@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pyramids", "Pyramids\Pyramids.csproj", "{7390A259-1F98-4AB7-B7B1-DD1BC6716176}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7390A259-1F98-4AB7-B7B1-DD1BC6716176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7390A259-1F98-4AB7-B7B1-DD1BC6716176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7390A259-1F98-4AB7-B7B1-DD1BC6716176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7390A259-1F98-4AB7-B7B1-DD1BC6716176}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3130BB97-71AA-4476-858D-99C6129B1C58}
+	EndGlobalSection
+EndGlobal

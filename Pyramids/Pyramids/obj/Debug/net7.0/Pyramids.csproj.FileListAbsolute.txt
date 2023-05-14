@@ -1,0 +1,15 @@
+/Users/noahglaser/Projects/Pyramids/Pyramids/bin/Debug/net7.0/Pyramids
+/Users/noahglaser/Projects/Pyramids/Pyramids/bin/Debug/net7.0/Pyramids.deps.json
+/Users/noahglaser/Projects/Pyramids/Pyramids/bin/Debug/net7.0/Pyramids.runtimeconfig.json
+/Users/noahglaser/Projects/Pyramids/Pyramids/bin/Debug/net7.0/Pyramids.dll
+/Users/noahglaser/Projects/Pyramids/Pyramids/bin/Debug/net7.0/Pyramids.pdb
+/Users/noahglaser/Projects/Pyramids/Pyramids/obj/Debug/net7.0/Pyramids.csproj.AssemblyReference.cache
+/Users/noahglaser/Projects/Pyramids/Pyramids/obj/Debug/net7.0/Pyramids.GeneratedMSBuildEditorConfig.editorconfig
+/Users/noahglaser/Projects/Pyramids/Pyramids/obj/Debug/net7.0/Pyramids.AssemblyInfoInputs.cache
+/Users/noahglaser/Projects/Pyramids/Pyramids/obj/Debug/net7.0/Pyramids.AssemblyInfo.cs
+/Users/noahglaser/Projects/Pyramids/Pyramids/obj/Debug/net7.0/Pyramids.csproj.CoreCompileInputs.cache
+/Users/noahglaser/Projects/Pyramids/Pyramids/obj/Debug/net7.0/Pyramids.dll
+/Users/noahglaser/Projects/Pyramids/Pyramids/obj/Debug/net7.0/refint/Pyramids.dll
+/Users/noahglaser/Projects/Pyramids/Pyramids/obj/Debug/net7.0/Pyramids.pdb
+/Users/noahglaser/Projects/Pyramids/Pyramids/obj/Debug/net7.0/Pyramids.genruntimeconfig.cache
+/Users/noahglaser/Projects/Pyramids/Pyramids/obj/Debug/net7.0/ref/Pyramids.dll

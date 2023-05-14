@@ -1,0 +1,15 @@
+/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/bin/Debug/net7.0/IOfBefoldher
+/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/bin/Debug/net7.0/IOfBefoldher.deps.json
+/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/bin/Debug/net7.0/IOfBefoldher.runtimeconfig.json
+/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/bin/Debug/net7.0/IOfBefoldher.dll
+/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/bin/Debug/net7.0/IOfBefoldher.pdb
+/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/obj/Debug/net7.0/IOfBefoldher.csproj.AssemblyReference.cache
+/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/obj/Debug/net7.0/IOfBefoldher.GeneratedMSBuildEditorConfig.editorconfig
+/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/obj/Debug/net7.0/IOfBefoldher.AssemblyInfoInputs.cache
+/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/obj/Debug/net7.0/IOfBefoldher.AssemblyInfo.cs
+/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/obj/Debug/net7.0/IOfBefoldher.csproj.CoreCompileInputs.cache
+/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/obj/Debug/net7.0/IOfBefoldher.dll
+/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/obj/Debug/net7.0/refint/IOfBefoldher.dll
+/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/obj/Debug/net7.0/IOfBefoldher.pdb
+/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/obj/Debug/net7.0/IOfBefoldher.genruntimeconfig.cache
+/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/obj/Debug/net7.0/ref/IOfBefoldher.dll
