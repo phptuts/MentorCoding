@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/IOfBefoldher.csproj",
+      "projectUniqueName": "/Users/noahglaser/Projects/MentorCoding/IOfBefoldher/IOfBefoldher/IOfBefoldher.csproj",
       "projectName": "IOfBefoldher",
-      "projectPath": "/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/IOfBefoldher.csproj",
+      "projectPath": "/Users/noahglaser/Projects/MentorCoding/IOfBefoldher/IOfBefoldher/IOfBefoldher.csproj",
       "packagesPath": "/Users/noahglaser/.nuget/packages/",
-      "outputPath": "/Users/noahglaser/Projects/IOfBefoldher/IOfBefoldher/obj/",
+      "outputPath": "/Users/noahglaser/Projects/MentorCoding/IOfBefoldher/IOfBefoldher/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/noahglaser/.nuget/NuGet/NuGet.Config"

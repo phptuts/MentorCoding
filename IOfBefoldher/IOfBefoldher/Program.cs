@@ -2,33 +2,48 @@
 
 Console.Write("Enter a number: ");
 
-var num = Convert.ToInt32(Console.ReadLine());
+var size = Convert.ToInt32(Console.ReadLine());
 
-var rows = num;
-var isOdd = rows % 2 == 1;
-var middleList = new List<int>();
-if (isOdd)
+List<int> GetIndexListForStarsOfMiddlePartOfI(int size)
 {
-    // Rounds up on the middle number so if it's 5 we'll get 2.5 which will turn into 3
-    // Then we subtract one becuase of the zero index base.
-    middleList.Add(Convert.ToInt32(Math.Ceiling(rows / 2.0)) - 1);
-}
-else
-{
-    // Divides the number of rows by 2 so if it's 6 we'll get 3
-    // Subtracting one because it's zero index based.
-    middleList.Add(rows / 2 - 1);
-    middleList.Add(rows / 2);
-}
-
-for (var row = 0; row < rows; row += 1)
-{
-    for (var column = 0; column < rows; column += 1)
+    var isOdd = size % 2 == 1;
+    var indexListForColumnOftheI = new List<int>();
+    if (isOdd)
     {
-        if (row == 0 || row  == rows - 1)
+        // Rounds up on the middle number so if it's 5 we'll get 2.5 which will turn into 3
+        // Then we subtract one becuase of the zero index base.
+        indexListForColumnOftheI.Add(Convert.ToInt32(Math.Ceiling(size / 2.0)) - 1);
+    }
+    else
+    {
+        // Divides the number of size by 2 so if it's 6 we'll get 3
+        // Subtracting one because it's zero index based.
+        indexListForColumnOftheI.Add(size / 2 - 1);
+        indexListForColumnOftheI.Add(size / 2);
+    }
+
+    return indexListForColumnOftheI;
+}
+
+// This is a list of indexes that should be stared for the middle part of the I.
+List<int> columnsIndexThatShouldBeStarred = GetIndexListForStarsOfMiddlePartOfI(size);
+
+bool IsTopOrBottomOfI(int row)
+{
+    return row == 0 || row == size - 1;
+}
+
+
+for (var row = 0; row < size; row += 1)
+{
+    for (var column = 0; column < size; column += 1)
+    {
+        // If it's on the top or bottom of the I it should be stared no matter what.
+        if (IsTopOrBottomOfI(row))
         {
             Console.Write("*");
-        } else if (middleList.Contains(column))
+        }
+        else if (columnsIndexThatShouldBeStarred.Contains(column))
         {
             Console.Write("*");
         }

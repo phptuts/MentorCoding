@@ -39,9 +39,9 @@ for (var i = num; i > 0; i -= 1)
 }
 Console.WriteLine();
 Console.WriteLine();
-for (var i = num; i > 0; i -= 1)
+for (var i = num; i >= 0; i -= 1)
 {
-    for (var j = 0; j <= num; j += 1)
+    for (var j = 0; j < num; j += 1)
     {
         if (j < i)
         {

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/noahglaser/Projects/Pyramids/Pyramids/Pyramids.csproj",
+      "projectUniqueName": "/Users/noahglaser/Projects/MentorCoding/Pyramids/Pyramids/Pyramids.csproj",
       "projectName": "Pyramids",
-      "projectPath": "/Users/noahglaser/Projects/Pyramids/Pyramids/Pyramids.csproj",
+      "projectPath": "/Users/noahglaser/Projects/MentorCoding/Pyramids/Pyramids/Pyramids.csproj",
       "packagesPath": "/Users/noahglaser/.nuget/packages/",
-      "outputPath": "/Users/noahglaser/Projects/Pyramids/Pyramids/obj/",
+      "outputPath": "/Users/noahglaser/Projects/MentorCoding/Pyramids/Pyramids/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/noahglaser/.nuget/NuGet/NuGet.Config"
