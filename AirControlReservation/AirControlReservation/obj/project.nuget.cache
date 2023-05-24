@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "svJoOXnHwvHO5d2gM9Jyk3190A9sdQqYSJwZh87uvOtVVDYV8mj+Zwvr8XJ+fV8F/cGqslfALLsVeQKzCsAKNg==",
+  "success": true,
+  "projectFilePath": "/Users/noahglaser/Projects/MentorCoding/AirControlReservation/AirControlReservation/AirControlReservation.csproj",
+  "expectedPackageFiles": [
+    "/Users/noahglaser/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

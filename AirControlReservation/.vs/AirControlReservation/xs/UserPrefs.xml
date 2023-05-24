@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{5B83F1C5-CB54-4E1B-928A-2F2B9FCD56E1}|Default">
+  <MonoDevelop.Ide.ItemProperties.AirControlReservation PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirControlReservation/AirControl.cs">
+    <Files>
+      <File FileName="AirControlReservation/Program.cs" Line="7" Column="20" />
+      <File FileName="AirControlReservation/ColumnLetter.cs" Line="4" Column="8" />
+      <File FileName="AirControlReservation/Airplane.cs" Line="6" Column="50" />
+      <File FileName="AirControlReservation/Passenger.cs" Line="4" Column="8" />
+      <File FileName="AirControlReservation/Seat.cs" Line="16" Column="1" />
+      <File FileName="AirControlReservation/.editorconfig" Line="4" Column="1" />
+      <File FileName="AirControlReservation/SaveMemory.cs" Line="20" Column="29" />
+      <File FileName="AirControlReservation/SaveFile.cs" Line="6" Column="1" />
+      <File FileName="AirControlReservation/ISave.cs" Line="6" Column="20" />
+      <File FileName="AirControlReservation/AirControl.cs" Line="77" Column="1" />
+      <File FileName="AirControlReservation/Print.cs" Line="63" Column="1" />
+      <File FileName="AirControlReservation/Row.cs" Line="6" Column="87" />
+      <File FileName="AirControlReservation/AirplaneFactory.cs" Line="33" Column="11" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AirControlReservation" expanded="True">
+            <Node name="AirControlReservation" expanded="True" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
