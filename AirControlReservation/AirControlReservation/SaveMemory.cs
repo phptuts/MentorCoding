@@ -13,7 +13,6 @@ public class SaveMemory : ISave
             if (_airplane is null)
             {
                 var airplane = AirplaneFactory.CreateAirplane();
-                Save(airplane);
                 return airplane;
             }
 
@@ -25,9 +24,8 @@ public class SaveMemory : ISave
         }
     }
 
-    public Task Save(Airplane airplane)
+    public Task Save()
     {
-        Airplane = airplane;
         return Task.CompletedTask;
     }
 }

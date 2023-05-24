@@ -8,6 +8,8 @@ public class SaveFile: ISave
 {
     public static readonly string FILE_NAME = "airplane.json";
 
+    private Airplane _airplane;
+
     public readonly JsonSerializerSettings serializerSettings = new JsonSerializerSettings
     {
         ContractResolver = new DefaultContractResolver
@@ -22,21 +24,26 @@ public class SaveFile: ISave
         {
             if (!File.Exists(FILE_NAME))
             {
-                Save(AirplaneFactory.CreateAirplane()).ConfigureAwait(true);
+                _airplane = AirplaneFactory.CreateAirplane();
+                Save().ConfigureAwait(true);
             }
             var json = File.ReadAllText(FILE_NAME);
             var airplane =  JsonConvert.DeserializeObject<Airplane>(json, serializerSettings);
             if (airplane is null)
             {
-                airplane = AirplaneFactory.CreateAirplane();
-                Save(airplane).ConfigureAwait(true);
+                _airplane = AirplaneFactory.CreateAirplane();
+                Save().ConfigureAwait(true);
+            }
+            else
+            {
+                _airplane = airplane;
             }
 
-            return airplane;
+            return _airplane;
         }
     }
 
-	public async Task Save(Airplane airplane)
+	public async Task Save()
 	{
 		if (File.Exists(FILE_NAME))
 		{
@@ -44,7 +51,7 @@ public class SaveFile: ISave
 
         }
         
-        var json = JsonConvert.SerializeObject(airplane, serializerSettings);
+        var json = JsonConvert.SerializeObject(_airplane, serializerSettings);
         await File.WriteAllTextAsync(FILE_NAME, json);
 
         return;

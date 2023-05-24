@@ -5,7 +5,7 @@ public interface ISave
 {
     public Airplane Airplane { get; }
 
-    public Task Save(Airplane airplane);
+    public Task Save();
 }
 
 

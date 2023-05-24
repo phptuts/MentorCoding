@@ -8,24 +8,26 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="AirControlReservation/AirControl.cs">
     <Files>
       <File FileName="AirControlReservation/Program.cs" Line="7" Column="20" />
-      <File FileName="AirControlReservation/ColumnLetter.cs" Line="4" Column="8" />
-      <File FileName="AirControlReservation/Airplane.cs" Line="6" Column="50" />
-      <File FileName="AirControlReservation/Passenger.cs" Line="4" Column="8" />
+      <File FileName="AirControlReservation/ColumnLetter.cs" />
+      <File FileName="AirControlReservation/Airplane.cs" Line="18" Column="36" />
+      <File FileName="AirControlReservation/Passenger.cs" />
       <File FileName="AirControlReservation/Seat.cs" Line="16" Column="1" />
-      <File FileName="AirControlReservation/.editorconfig" Line="4" Column="1" />
-      <File FileName="AirControlReservation/SaveMemory.cs" Line="20" Column="29" />
-      <File FileName="AirControlReservation/SaveFile.cs" Line="6" Column="1" />
-      <File FileName="AirControlReservation/ISave.cs" Line="6" Column="20" />
-      <File FileName="AirControlReservation/AirControl.cs" Line="77" Column="1" />
-      <File FileName="AirControlReservation/Print.cs" Line="63" Column="1" />
-      <File FileName="AirControlReservation/Row.cs" Line="6" Column="87" />
-      <File FileName="AirControlReservation/AirplaneFactory.cs" Line="33" Column="11" />
+      <File FileName="AirControlReservation/.editorconfig" />
+      <File FileName="AirControlReservation/SaveMemory.cs" Line="16" Column="1" />
+      <File FileName="AirControlReservation/SaveFile.cs" Line="30" Column="1" />
+      <File FileName="AirControlReservation/ISave.cs" Line="8" Column="22" />
+      <File FileName="AirControlReservation/AirControl.cs" Line="82" Column="13" />
+      <File FileName="AirControlReservation/Print.cs" Line="29" Column="1" />
+      <File FileName="AirControlReservation/Row.cs" />
+      <File FileName="AirControlReservation/AirplaneFactory.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AirControlReservation" expanded="True">
-            <Node name="AirControlReservation" expanded="True" selected="True" />
+            <Node name="AirControlReservation" expanded="True">
+              <Node name="AirControl.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
