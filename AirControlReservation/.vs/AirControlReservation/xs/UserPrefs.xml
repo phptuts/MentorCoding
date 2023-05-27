@@ -7,17 +7,17 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="AirControlReservation/AirControl.cs">
     <Files>
-      <File FileName="AirControlReservation/Program.cs" Line="7" Column="20" />
-      <File FileName="AirControlReservation/ColumnLetter.cs" />
-      <File FileName="AirControlReservation/Airplane.cs" Line="18" Column="36" />
+      <File FileName="AirControlReservation/Program.cs" />
+      <File FileName="AirControlReservation/ColumnLetter.cs" Line="1" Column="1" />
+      <File FileName="AirControlReservation/Airplane.cs" Line="22" Column="37" />
       <File FileName="AirControlReservation/Passenger.cs" />
-      <File FileName="AirControlReservation/Seat.cs" Line="16" Column="1" />
+      <File FileName="AirControlReservation/Seat.cs" />
       <File FileName="AirControlReservation/.editorconfig" />
-      <File FileName="AirControlReservation/SaveMemory.cs" Line="16" Column="1" />
-      <File FileName="AirControlReservation/SaveFile.cs" Line="30" Column="1" />
-      <File FileName="AirControlReservation/ISave.cs" Line="8" Column="22" />
-      <File FileName="AirControlReservation/AirControl.cs" Line="82" Column="13" />
-      <File FileName="AirControlReservation/Print.cs" Line="29" Column="1" />
+      <File FileName="AirControlReservation/SaveMemory.cs" />
+      <File FileName="AirControlReservation/SaveFile.cs" />
+      <File FileName="AirControlReservation/ISave.cs" />
+      <File FileName="AirControlReservation/AirControl.cs" Line="208" Column="18" />
+      <File FileName="AirControlReservation/Print.cs" Line="1" Column="1" />
       <File FileName="AirControlReservation/Row.cs" />
       <File FileName="AirControlReservation/AirplaneFactory.cs" />
     </Files>

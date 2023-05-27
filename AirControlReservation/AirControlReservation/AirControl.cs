@@ -41,6 +41,7 @@ public class AirControl
 				Reserveration();
 				break;
 			default:
+				Console.WriteLine();
 				Console.WriteLine("Good Bye!");
 				break;
 		}
@@ -77,45 +78,24 @@ E: Economy Class
 
 		while(findingSeat)
 		{
-			Console.Write("Please enter the row number: ");
-			int rowNumber;
-            int.TryParse(Console.ReadLine(), out rowNumber);
-            while (!IsValidRowSeatClass(seatClass, rowNumber))
-            {
-                Console.WriteLine();
-                Console.WriteLine(InvalidEntry);
-                Console.Write("Please enter the row number: ");
-                rowNumber = Convert.ToInt32(Console.ReadLine());
-            }
-			Console.Write("Please enter the seat letter: ");
-            var seatColumn = Convert.ToChar(Console.Read());
-
-            while (!IsColumnSeatValid(seatColumn))
-            {
-                Console.WriteLine();
-                Console.WriteLine(InvalidEntry);
-                Console.Write("Please enter the seat letter: ");
-
-                seatColumn = Convert.ToChar(Console.Read());
-            }
-			var seatColumnEnum = GetColumnLetter(seatColumn);
+			(int rowNumber, ColumnLetter seatColumnEnum) = AskForSeat(seatClass);
 			findingSeat = IsSeatTaken(rowNumber, seatColumnEnum);
 
 			if (findingSeat)
 			{
-				Console.WriteLine($"Sorry seat {rowNumber}{seatColumn} is already taken.");
+				Console.WriteLine($"Sorry seat {rowNumber}{seatColumnEnum} is already taken.");
 				Console.WriteLine();
                 continue;
 			}
 
-			Console.WriteLine($"Seat {rowNumber}{seatColumn} is available.");
+			Console.WriteLine($"Seat {rowNumber}{seatColumnEnum} is available.");
 			Console.Write("Please enter the passenger's firstname: ");
 			var firstName = Console.ReadLine();
 			Console.Write("Please enter the passenger's lastname: ");
 			var lastName = Console.ReadLine();
 			Console.Write("Please enter the passenger's passport number: ");
 			var passPortNumber = Console.ReadLine();
-            Console.WriteLine($"Seat {rowNumber}{seatColumn} is was successfully booked.");
+            Console.WriteLine($"Seat {rowNumber}{seatColumnEnum} is was successfully booked.");
 			_saver.Airplane.Book(rowNumber, seatColumnEnum, new Passenger()
 			{
 				FirstName = firstName ?? "",
@@ -130,7 +110,36 @@ E: Economy Class
         Start();
     }
 
-	public bool IsValidRowSeatClass(char seatClass, int rowNumber)
+	private (int, ColumnLetter) AskForSeat(char? seatClass = null)
+	{
+        Console.Write("Please enter the row number: ");
+        _ = int.TryParse(Console.ReadLine(), out int rowNumber);
+		var defaultSeatClass = rowNumber <= 5 ? 'B' : 'E';
+		
+        while (!IsValidRowSeatClass(seatClass ?? defaultSeatClass, rowNumber))
+        {
+            Console.WriteLine();
+            Console.WriteLine(InvalidEntry);
+            Console.Write("Please enter the row number: ");
+            rowNumber = Convert.ToInt32(Console.ReadLine());
+        }
+        Console.Write("Please enter the seat letter: ");
+        var seatColumn = Convert.ToChar(Console.ReadLine() ?? "");
+
+        while (!IsColumnSeatValid(seatColumn))
+        {
+            Console.WriteLine();
+            Console.WriteLine(InvalidEntry);
+            Console.Write("Please enter the seat letter: ");
+
+            seatColumn = Convert.ToChar(Console.ReadLine() ?? "");
+        }
+        var seatColumnEnum = GetColumnLetter(seatColumn);
+
+		return (rowNumber, seatColumnEnum);
+    }
+
+    private bool IsValidRowSeatClass(char seatClass, int rowNumber)
 	{
 		if (rowNumber <= 0)
 		{
@@ -145,7 +154,7 @@ E: Economy Class
 		return rowNumber >= 5 && rowNumber <= 40;
 	}
 
-	public bool IsColumnSeatValid(char seatColunm)
+    private bool IsColumnSeatValid(char seatColunm)
 	{
        try
 	   {
@@ -158,7 +167,7 @@ E: Economy Class
 		}
     }
 
-	public ColumnLetter GetColumnLetter(char seatColunm)
+    private ColumnLetter GetColumnLetter(char seatColunm)
 	{
         ColumnLetter columnLetter;
         if (!Enum.TryParse(seatColunm.ToString(), false, out columnLetter))
@@ -169,16 +178,37 @@ E: Economy Class
 		return columnLetter;
     }
 
-    public bool IsSeatTaken(int rowNumber, ColumnLetter seatColunm)
+    private bool IsSeatTaken(int rowNumber, ColumnLetter seatColunm)
 	{
-		return _saver.Airplane.IsSeatTake(rowNumber, seatColunm);
+		return _saver.Airplane.IsSeatTaken(rowNumber, seatColunm);
 	}
 
-	public void SeatVerification()
+    private void SeatVerification()
 	{
-		Console.WriteLine("Not Implemented");
+        Console.WriteLine();
+        (int rowNumber, ColumnLetter seatColumnEnum) = AskForSeat();
 
-		Start();
+		if (!_saver.Airplane.IsSeatTaken(rowNumber, seatColumnEnum))
+		{
+			Console.WriteLine("This seat is available.");
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+
+            Start();
+            return;
+		}
+
+		var passenger = _saver.Airplane.GetPassenger(rowNumber, seatColumnEnum);
+		Console.Write($@"Passenger details
+Firstname: {passenger?.FirstName}
+Lastname: {passenger?.LastName}
+Passport Number: {passenger?.PassPortNumber}
+");
+
+		Console.WriteLine("Press any key to continue...");
+		Console.ReadKey();
+
+        Start();
 	}
 }
 

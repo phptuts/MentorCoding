@@ -16,11 +16,7 @@ public static class AirplaneFactory
                 row.Seats[letterIndex] = new Seat()
                 {
                     Column = c,
-                    Row = i + 1,
-                    Passenger = new Passenger()
-                    {
-                        FirstName = "BILL"
-                    }
+                    Row = i + 1
                 };
                 letterIndex += 1;
             }
