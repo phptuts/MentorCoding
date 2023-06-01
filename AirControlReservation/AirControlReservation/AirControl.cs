@@ -8,14 +8,14 @@ namespace AirControlReservation;
 
 public class AirControl
 {
-	private ISave _saver;
+	private IStorage _saver;
 
     private readonly List<char> ValidStartOptions = new List<char> { 'X', 'R', 'S' };
     private readonly List<char> ValidSeatOptions = new List<char> { 'E', 'B' };
     private readonly string InvalidEntry = "Invalid Entry! Please try again.";
 
 
-    public AirControl(ISave saver)
+    public AirControl(IStorage saver)
 	{
 		_saver = saver;
 	}

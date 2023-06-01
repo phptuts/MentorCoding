@@ -1,7 +1,7 @@
 ﻿using System;
 namespace AirControlReservation;
 
-public interface ISave
+public interface IStorage
 {
     public Airplane Airplane { get; }
 
