@@ -2,7 +2,7 @@
 
 namespace AirControlReservation;
 
-public class SaveMemory : ISave
+public class SaveMemory : IStorage
 {
     private Airplane? _airplane;
 

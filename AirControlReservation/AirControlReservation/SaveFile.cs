@@ -4,7 +4,7 @@ using Newtonsoft.Json.Serialization;
 
 namespace AirControlReservation;
 
-public class SaveFile: ISave
+public class SaveFile: IStorage
 {
     public static readonly string FILE_NAME = "airplane.json";
 
