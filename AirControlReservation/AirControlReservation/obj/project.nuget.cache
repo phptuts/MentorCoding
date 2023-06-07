@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "svJoOXnHwvHO5d2gM9Jyk3190A9sdQqYSJwZh87uvOtVVDYV8mj+Zwvr8XJ+fV8F/cGqslfALLsVeQKzCsAKNg==",
+  "dgSpecHash": "mNMlaDQypB3B2PF5xJqYBUeuYiXwbDzWRrZUXj74Ls/7CKeXTmYHC9XgrHnzF3imVDZnyObMSPeNiuPpU5bAjg==",
   "success": true,
   "projectFilePath": "/Users/noahglaser/Projects/MentorCoding/AirControlReservation/AirControlReservation/AirControlReservation.csproj",
   "expectedPackageFiles": [
+    "/Users/noahglaser/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/noahglaser/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "/Users/noahglaser/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []

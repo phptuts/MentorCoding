@@ -9,5 +9,12 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Menu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Menu\" />
   </ItemGroup>
 </Project>
