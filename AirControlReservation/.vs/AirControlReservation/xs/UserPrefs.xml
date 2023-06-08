@@ -1,24 +1,27 @@
 ﻿<Properties StartupConfiguration="{5B83F1C5-CB54-4E1B-928A-2F2B9FCD56E1}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AirControlReservation/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirControlReservation/Menu/MainScreen.cs">
     <Files>
       <File FileName="AirControlReservation/AirControl.cs" Line="18" Column="31" />
-      <File FileName="AirControlReservation/Print.cs" />
+      <File FileName="AirControlReservation/Print.cs" Line="9" Column="32" />
       <File FileName="AirControlReservation/Row.cs" />
       <File FileName="AirControlReservation/AirplaneFactory.cs" />
-      <File FileName="AirControlReservation/Menu/ICommand.cs" Line="4" Column="1" />
-      <File FileName="AirControlReservation/Menu/Screen.cs" Line="9" Column="21" />
-      <File FileName="AirControlReservation/Menu/Menu.cs" Line="8" Column="58" />
-      <File FileName="AirControlReservation/Menu/MenuItem.cs" Line="12" Column="62" />
-      <File FileName="AirControlReservation/Menu/MainScreen.cs" Line="9" Column="36" />
-      <File FileName="AirControlReservation/Program.cs" Line="16" Column="4" />
+      <File FileName="AirControlReservation/Menu/ICommand.cs" Line="6" Column="18" />
+      <File FileName="AirControlReservation/Menu/Screen.cs" Line="43" Column="1" />
+      <File FileName="AirControlReservation/Menu/Menu.cs" Line="19" Column="22" />
+      <File FileName="AirControlReservation/Menu/MenuItem.cs" Line="6" Column="13" />
+      <File FileName="AirControlReservation/Menu/MainScreen.cs" Line="29" Column="36" />
+      <File FileName="AirControlReservation/Program.cs" Line="26" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AirControlReservation" expanded="True">
-            <Node name="AirControlReservation" expanded="True" selected="True">
+            <Node name="AirControlReservation" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
               <Node name="Menu" expanded="True" />
             </Node>
           </Node>

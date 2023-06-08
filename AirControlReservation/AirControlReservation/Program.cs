@@ -16,6 +16,10 @@ using Microsoft.Extensions.DependencyInjection;
 //Console.Read();
 var serviceCollection = new ServiceCollection();
 var serviceProvider = serviceCollection.AddSingleton<MainScreen, MainScreen>()
+    .AddSingleton<SeatClassSelectionScreen, SeatClassSelectionScreen>()
+    .AddSingleton<BusinessClassSeatSelection, BusinessClassSeatSelection>()
+    .AddSingleton<EconomyClassSeatSelectionScreen, EconomyClassSeatSelectionScreen>()
+    .AddSingleton<IStorage, SaveFile>()
 .BuildServiceProvider();
 ICommand? currentScreen = serviceProvider.GetService<MainScreen>();
 do
