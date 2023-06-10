@@ -8,15 +8,17 @@ public abstract class SeatSelectionScreen : Screen
 {
     private IServiceProvider _serviceProvider { get; }
     public IStorage _storage { get; }
+    public IAskSeatService _askSeatService { get; }
     public int RowStart { get;  }
 
     public int NumberOfRows { get;  }
 
-    public SeatSelectionScreen(IServiceProvider serviceProvider, IStorage storage, int rowStart, int numberOfRows, string title) :
+    public SeatSelectionScreen(IServiceProvider serviceProvider, IStorage storage, IAskSeatService askSeatService, int rowStart, int numberOfRows, string title) :
         base(title, new Menu(title, "Please enter the row number: "))
     {
         _serviceProvider = serviceProvider;
         _storage = storage;
+        _askSeatService = askSeatService;
         RowStart = rowStart;
         NumberOfRows = numberOfRows;
     }
@@ -25,40 +27,55 @@ public abstract class SeatSelectionScreen : Screen
     {
         Console.WriteLine();
         DrawHeader();
-        PrintSeats(RowStart, NumberOfRows);
+        PrintSeats();
+
+        var (columnLetter, rowNumber) = FindSeat();
+        Console.Write("Please enter the passenger's firstname: ");
+        var firstName = Console.ReadLine() ?? " ";
+        Console.Write("Please enter the passenger's lastname: ");
+        var lastName = Console.ReadLine() ?? " ";
+        Console.Write("Please enter the passenger's passport number: ");
+        var passPortNumber = Console.ReadLine() ?? " ";
+        _storage.Airplane.Book(rowNumber, columnLetter, new Passenger()
+        {
+            FirstName = firstName,
+            LastName = lastName,
+            PassPortNumber = passPortNumber
+        });
+        // TODO REFACTOR TO BOOK METHOD IN ISTORAGE
+        _storage.Save();
         Console.WriteLine();
-        Console.Write(Menu.Prompt);
-        int.TryParse(Console.ReadLine(), out var rowNumber);
-        while (rowNumber < RowStart || rowNumber > RowStart + NumberOfRows)
-        {
-            Console.WriteLine("Invalid Entry! Please try again.");
-            int.TryParse(Console.ReadLine(), out rowNumber);
-        }
-
-        Console.Write("Please enter the seat letter: ");
-        var seatColumn = Convert.ToChar(Console.ReadLine() ?? "");
-
-        while (!IsColumnSeatValid(seatColumn))
-        {
-            Console.WriteLine();
-            Console.WriteLine(GeneralConstants.InvalidInputStr);
-            Console.Write("Please enter the seat letter: ");
-
-            seatColumn = Convert.ToChar(Console.ReadLine() ?? "");
-        }
-        var seatColumnEnum = GetColumnLetter(seatColumn);
-
+        Console.WriteLine($"Seat {rowNumber}{columnLetter} was successfully booked!");
+        Console.WriteLine();
 
         return _serviceProvider.GetService<MainScreen>();
     }
 
-    protected void PrintSeats(int start, int end)
+    protected (ColumnLetter, int) FindSeat()
+    {
+        
+        while(true)
+        {
+            var (seatColumn, rowNumber, isTaken) = _askSeatService.AskSeat(RowStart, NumberOfRows);
+
+            if (!isTaken)
+            {
+                return (seatColumn, rowNumber);
+            }
+
+            Console.WriteLine($"Sorry seat {rowNumber}{seatColumn} is already taken.");
+        }
+    }
+
+
+
+    protected void PrintSeats()
     {
         Console.WriteLine("    A B C D E");
-        for (var i = start; i < end; i += 1)
+        for (var i = RowStart; i < RowStart + NumberOfRows; i += 1)
         {
-            Console.Write($"  {i + 1} ");
-            foreach (var seat in _storage.Airplane.Rows[i].Seats)
+            Console.Write($"  {i} ");
+            foreach (var seat in _storage.Airplane.Rows[i - 1].Seats)
             {
                 Console.Write(seat.Taken() ? "X" : " ");
                 Console.Write(" ");
@@ -66,6 +83,7 @@ public abstract class SeatSelectionScreen : Screen
             Console.WriteLine();
         }
     }
+
 
 }
 

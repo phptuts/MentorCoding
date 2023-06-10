@@ -13,7 +13,7 @@ public class MainScreen: Screen
 	{
         _serviceProvider = serviceProvider;
         Menu.AddMenuItem('R', new MenuItem('R', "Reservation", new Lazy<ICommand>(() => _serviceProvider.GetService<SeatClassSelectionScreen>())));
-        Menu.AddMenuItem('S', new MenuItem('S', "Seat Verification", new Lazy<ICommand>(() => null)));
+        Menu.AddMenuItem('S', new MenuItem('S', "Seat Verification", new Lazy<ICommand>(() => _serviceProvider.GetService<SeatVerificationScreen>())));
         Menu.AddMenuItem('X', new MenuItem('X', "Exit the System", new Lazy<ICommand>(() => null)));
     }
 

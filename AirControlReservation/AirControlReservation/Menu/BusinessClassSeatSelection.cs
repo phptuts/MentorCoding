@@ -3,8 +3,8 @@ namespace AirControlReservation.Menu
 {
 	public class BusinessClassSeatSelection: SeatSelectionScreen
 	{
-
-        public BusinessClassSeatSelection(IServiceProvider serviceProvider, IStorage storage): base(serviceProvider, storage, 0, 5, "Business Class")
+		// Communicates the purpose of the class by giving it's own name
+        public BusinessClassSeatSelection(IServiceProvider serviceProvider, IStorage storage, IAskSeatService askSeatService): base(serviceProvider, storage, askSeatService, 1, 5, "Business Class")
 		{
         }
 	}

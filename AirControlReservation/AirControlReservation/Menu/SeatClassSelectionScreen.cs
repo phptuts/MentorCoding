@@ -30,14 +30,14 @@ public class SeatClassSelectionScreen : Screen
         var isValidOption = char.TryParse(Console.ReadLine(), out option);
         while (!isValidOption)
         {
-            Console.WriteLine("Invalid Entry! Please try again.");
+            Console.WriteLine(GeneralConstants.InvalidInputStr);
             Console.WriteLine(Menu.Prompt);
             isValidOption = char.TryParse(Console.ReadLine(), out option);
         }
 
         while (!Menu.MenuItems.ContainsKey(option))
         {
-            Console.WriteLine("Invalid Entry! Please try again.");
+            Console.WriteLine(GeneralConstants.InvalidInputStr);
             Console.WriteLine(Menu.Prompt);
             char.TryParse(Console.ReadLine(), out option);
         }
