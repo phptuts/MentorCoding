@@ -1,5 +1,5 @@
 ﻿using System;
-namespace AirControlReservation.Menu;
+namespace AirControlReservation.Interfaces;
 
 public interface ICommand
 {

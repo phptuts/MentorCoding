@@ -1,7 +1,9 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
+using AirControlReservation.Interfaces;
+using AirControlReservation.Enums;
 
-namespace AirControlReservation.Menu
+namespace AirControlReservation.Menus
 {
 	public class SeatVerificationScreen: Screen
 	{

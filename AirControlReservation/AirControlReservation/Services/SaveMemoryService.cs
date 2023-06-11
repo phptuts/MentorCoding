@@ -1,8 +1,11 @@
 ﻿using System;
+using AirControlReservation.Interfaces;
+using AirControlReservation.Models;
+using AirControlReservation.Factories;
 
-namespace AirControlReservation;
+namespace AirControlReservation.Services;
 
-public class SaveMemory : IStorage
+public class SaveMemoryService : IStorage
 {
     private Airplane? _airplane;
 

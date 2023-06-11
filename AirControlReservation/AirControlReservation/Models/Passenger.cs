@@ -1,4 +1,4 @@
-﻿namespace AirControlReservation;
+﻿namespace AirControlReservation.Models;
 
 // See https://aka.ms/new-console-template for more information
 public class Passenger

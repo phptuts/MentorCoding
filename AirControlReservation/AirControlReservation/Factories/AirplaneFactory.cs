@@ -1,5 +1,8 @@
 ﻿using System;
-namespace AirControlReservation;
+using AirControlReservation.Models;
+using AirControlReservation.Enums;
+
+namespace AirControlReservation.Factories;
 
 public static class AirplaneFactory
 {

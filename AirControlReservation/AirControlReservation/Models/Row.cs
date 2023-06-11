@@ -1,5 +1,7 @@
 ﻿using System;
-namespace AirControlReservation;
+using AirControlReservation.Enums;
+
+namespace AirControlReservation.Models;
 
 public class Row
 {

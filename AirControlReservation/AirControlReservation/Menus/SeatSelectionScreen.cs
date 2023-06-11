@@ -1,8 +1,11 @@
 ﻿
 using System;
 using Microsoft.Extensions.DependencyInjection;
+using AirControlReservation.Interfaces;
+using AirControlReservation.Models;
+using AirControlReservation.Enums;
 
-namespace AirControlReservation.Menu;
+namespace AirControlReservation.Menus;
 
 public abstract class SeatSelectionScreen : Screen
 {

@@ -1,5 +1,7 @@
 ﻿using System;
-namespace AirControlReservation.Menu;
+namespace AirControlReservation.Menus;
+using AirControlReservation.Interfaces;
+
 
 public class EconomyClassSeatSelectionScreen: SeatSelectionScreen
 {

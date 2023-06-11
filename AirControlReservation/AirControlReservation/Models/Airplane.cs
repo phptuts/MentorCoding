@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
-namespace AirControlReservation;
+using AirControlReservation.Enums;
+namespace AirControlReservation.Models;
 
 public class Airplane
 {

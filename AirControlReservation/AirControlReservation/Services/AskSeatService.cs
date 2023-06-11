@@ -1,5 +1,9 @@
 ﻿using System;
-namespace AirControlReservation.Menu
+using AirControlReservation.Interfaces;
+using AirControlReservation.Enums;
+using AirControlReservation.Constants;
+
+namespace AirControlReservation.Services
 {
 	public class AskSeatService: IAskSeatService
 	{

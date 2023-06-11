@@ -1,5 +1,7 @@
 ﻿using System;
-namespace AirControlReservation;
+using AirControlReservation.Models;
+
+namespace AirControlReservation.Interfaces;
 
 public interface IStorage
 {

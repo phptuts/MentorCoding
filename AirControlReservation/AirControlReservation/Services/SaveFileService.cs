@@ -1,10 +1,15 @@
 ﻿using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using AirControlReservation.Interfaces;
+using AirControlReservation.Enums;
+using AirControlReservation.Constants;
+using AirControlReservation.Models;
+using AirControlReservation.Factories;
 
-namespace AirControlReservation;
+namespace AirControlReservation.Services;
 
-public class SaveFile: IStorage
+public class SaveFileService: IStorage
 {
     public static readonly string FILE_NAME = "airplane.json";
 
@@ -48,7 +53,6 @@ public class SaveFile: IStorage
 		if (File.Exists(FILE_NAME))
 		{
 			File.Delete(FILE_NAME);
-
         }
         
         var json = JsonConvert.SerializeObject(_airplane, serializerSettings);
