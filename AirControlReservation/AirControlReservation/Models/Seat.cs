@@ -6,6 +6,13 @@ namespace AirControlReservation.Models;
 
 public class Seat
 {
+    public string Id {
+        get
+        {
+            return $"{Row}{Column}";
+        }
+    }
+
     public ColumnLetter Column { get; set; }
 
     public int Row { get; set; }

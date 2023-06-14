@@ -2,34 +2,49 @@
 using AirControlReservation.Interfaces;
 using AirControlReservation.Models;
 using AirControlReservation.Factories;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace AirControlReservation.Services;
 
-public class SaveMemoryService : IStorage
+
+public class SaveMemoryService : IStorage<Seat, string>
 {
-    private Airplane? _airplane;
+    private List<Seat> Seats = new List<Seat>();
 
-    public Airplane Airplane
+    public async Task Create(Seat item)
     {
-        get
+        var foundSeat = await Get(item.Id);
+        if (foundSeat != null)
         {
-            if (_airplane is null)
-            {
-                var airplane = AirplaneFactory.CreateAirplane();
-                return airplane;
-            }
-
-            return _airplane;
+            return;
         }
-        private set
-        {
-            _airplane = value;
-        }
+        var seats = await GetAll();
+        Seats.Add(item);
     }
 
-    public Task Save()
+    public async Task Delete(string id)
     {
-        return Task.CompletedTask;
+        var seats = await GetAll();
+        Seats = seats.Where(x => x.Id != id).ToList();
+    }
+
+    public Task<Seat?> Get(string id)
+    {
+        return Task.FromResult(Seats.FirstOrDefault(x => x.Id == id));
+    }
+
+    public Task<List<Seat>> GetAll()
+    {
+        return Task.FromResult(Seats);
+    }
+
+    public async Task Update(Seat item)
+    {
+        var seats = await GetAll();
+        var updatedSeats = seats.Where(x => x.Id != item.Id).ToList();
+        updatedSeats.Add(item);
+        Seats = updatedSeats;
     }
 }
 

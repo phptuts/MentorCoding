@@ -14,7 +14,7 @@ public abstract class Screen : ICommand
 
 	public Menu Menu { get; set; }
 
-    public abstract ICommand? Execute();
+    public abstract Task<ICommand?> Execute();
 
     public virtual void DrawHeader()
     {

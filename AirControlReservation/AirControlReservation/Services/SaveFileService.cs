@@ -9,11 +9,9 @@ using AirControlReservation.Factories;
 
 namespace AirControlReservation.Services;
 
-public class SaveFileService: IStorage
+public class SaveFileService: IStorage<Seat, string>
 {
     public static readonly string FILE_NAME = "airplane.json";
-
-    private Airplane _airplane;
 
     public readonly JsonSerializerSettings serializerSettings = new JsonSerializerSettings
     {
@@ -23,42 +21,61 @@ public class SaveFileService: IStorage
         }
     };
 
-    public Airplane Airplane
+    public async Task Create(Seat item)
     {
-        get
+        var foundSeat = await Get(item.Id);
+        if (foundSeat != null)
         {
-            if (!File.Exists(FILE_NAME))
-            {
-                _airplane = AirplaneFactory.CreateAirplane();
-                Save().ConfigureAwait(true);
-            }
-            var json = File.ReadAllText(FILE_NAME);
-            var airplane =  JsonConvert.DeserializeObject<Airplane>(json, serializerSettings);
-            if (airplane is null)
-            {
-                _airplane = AirplaneFactory.CreateAirplane();
-                Save().ConfigureAwait(true);
-            }
-            else
-            {
-                _airplane = airplane;
-            }
-
-            return _airplane;
+            return;
         }
+        var seats = await GetAll();
+        seats.Add(item);
+        await Save(seats);
     }
 
-	public async Task Save()
-	{
-		if (File.Exists(FILE_NAME))
-		{
-			File.Delete(FILE_NAME);
+    public async Task<Seat?> Get(string id)
+    {
+        var seats = await GetAll();
+        return seats.FirstOrDefault(x => x.Id == id);
+    }
+
+    public Task<List<Seat>> GetAll()
+    {
+        if (!File.Exists(FILE_NAME))
+        {
+            return Task.FromResult(new List<Seat>());
         }
-        
-        var json = JsonConvert.SerializeObject(_airplane, serializerSettings);
+
+        var text = File.ReadAllText(FILE_NAME);
+        return Task.FromResult(JsonConvert.DeserializeObject<List<Seat>>(text, serializerSettings) ?? new List<Seat>());
+    }
+
+    public async Task Update(Seat item)
+    {
+        var seats = await GetAll();
+        var updatedSeats = seats.Where(x => x.Id != item.Id).ToList();
+        updatedSeats.Add(item);
+        await Save(updatedSeats);
+    }
+
+    public async Task Delete(string id)
+    {
+        var seats = await GetAll();
+        var updatedSeats = seats.Where(x => x.Id != id).ToList();
+        await Save(updatedSeats);
+    }
+
+    private async Task Save(List<Seat> seats)
+    {
+        if (File.Exists(FILE_NAME))
+        {
+            File.Delete(FILE_NAME);
+        }
+
+        var json = JsonConvert.SerializeObject(seats, serializerSettings);
         await File.WriteAllTextAsync(FILE_NAME, json);
 
         return;
-	}
+    }
 }
 

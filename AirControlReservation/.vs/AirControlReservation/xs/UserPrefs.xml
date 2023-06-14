@@ -1,30 +1,24 @@
 ﻿<Properties StartupConfiguration="{5B83F1C5-CB54-4E1B-928A-2F2B9FCD56E1}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AirControlReservation/Services/SaveFileService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirControlReservation/Menus/SeatSelectionScreen.cs">
     <Files>
-      <File FileName="AirControlReservation/Row.cs" Line="2" Column="35" />
-      <File FileName="AirControlReservation/AirplaneFactory.cs" Line="4" Column="1" />
-      <File FileName="AirControlReservation/Menu/ICommand.cs" Line="2" Column="43" />
-      <File FileName="AirControlReservation/Menu/Screen.cs" Line="2" Column="40" />
-      <File FileName="AirControlReservation/Menu/Menu.cs" Line="2" Column="38" />
-      <File FileName="AirControlReservation/Menu/MenuItem.cs" Line="19" Column="3" />
-      <File FileName="AirControlReservation/Menu/MainScreen.cs" Line="16" Column="16" />
-      <File FileName="AirControlReservation/Program.cs" Line="8" Column="1" />
-      <File FileName="AirControlReservation/Menu/SeatSelectionScreen.cs" Line="42" Column="49" />
-      <File FileName="AirControlReservation/Menu/BusinessClassSeatSelection.cs" Line="3" Column="1" />
-      <File FileName="AirControlReservation/Menu/EconomyClassSeatSelectionScreen.cs" Line="4" Column="1" />
-      <File FileName="AirControlReservation/Menu/GeneralConstants.cs" Line="3" Column="42" />
-      <File FileName="AirControlReservation/Airplane.cs" Line="2" Column="35" />
-      <File FileName="AirControlReservation/Menu/SeatVerificationScreen.cs" Line="4" Column="35" />
-      <File FileName="AirControlReservation/SaveMemory.cs" Line="4" Column="39" />
-      <File FileName="AirControlReservation/Seat.cs" Line="3" Column="35" />
-      <File FileName="AirControlReservation/ColumnLetter.cs" Line="2" Column="38" />
-      <File FileName="AirControlReservation/IStorage.cs" Line="2" Column="36" />
-      <File FileName="AirControlReservation/SaveFile.cs" Line="55" Column="27" />
-      <File FileName="AirControlReservation/Models/Passenger.cs" Line="1" Column="39" />
-      <File FileName="AirControlReservation/Services/AskSeatService.cs" Line="2" Column="1" />
-      <File FileName="AirControlReservation/Interfaces/IAskSeatService.cs" Line="2" Column="35" />
+      <File FileName="AirControlReservation/Services/SaveFileService.cs" Line="55" Column="9" />
+      <File FileName="AirControlReservation/Models/Seat.cs" Line="12" Column="30" />
+      <File FileName="AirControlReservation/Interfaces/IStorage.cs" Line="10" Column="23" />
+      <File FileName="AirControlReservation/Services/SaveMemoryService.cs" Line="8" Column="1" />
+      <File FileName="AirControlReservation/Services/SeatSelector.cs" Line="18" Column="31" />
+      <File FileName="AirControlReservation/Menus/SeatSelectionScreen.cs" Line="80" Column="43" />
+      <File FileName="AirControlReservation/Menus/SeatVerificationScreen.cs" Line="23" Column="46" />
+      <File FileName="AirControlReservation/Menus/SeatClassSelectionScreen.cs" Line="17" Column="91" />
+      <File FileName="AirControlReservation/Interfaces/ISeatSelector.cs" Line="9" Column="19" />
+      <File FileName="AirControlReservation/Menus/Screen.cs" Line="17" Column="36" />
+      <File FileName="AirControlReservation/Interfaces/ICommand.cs" Line="6" Column="24" />
+      <File FileName="AirControlReservation/Menus/MenuItem.cs" Line="1" Column="1" />
+      <File FileName="AirControlReservation/Menus/EconomyClassSeatSelectionScreen.cs" Line="9" Column="99" />
+      <File FileName="AirControlReservation/Menus/BusinessClassSeatSelection.cs" Line="10" Column="98" />
+      <File FileName="AirControlReservation/Menus/MainScreen.cs" Line="48" Column="16" />
+      <File FileName="AirControlReservation/Models/Passenger.cs" Line="10" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -35,11 +29,11 @@
               <Node name="Enums" expanded="True" />
               <Node name="Factories" expanded="True" />
               <Node name="Interfaces" expanded="True" />
-              <Node name="Menus" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Services" expanded="True">
-                <Node name="SaveFileService.cs" selected="True" />
+              <Node name="Menus" expanded="True">
+                <Node name="SeatSelectionScreen.cs" selected="True" />
               </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
             </Node>
           </Node>
         </State>

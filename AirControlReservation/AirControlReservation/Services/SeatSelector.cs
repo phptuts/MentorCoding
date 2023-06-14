@@ -2,19 +2,20 @@
 using AirControlReservation.Interfaces;
 using AirControlReservation.Enums;
 using AirControlReservation.Constants;
+using AirControlReservation.Models;
 
 namespace AirControlReservation.Services
 {
-	public class AskSeatService: IAskSeatService
+	public class SeatSelector : ISeatSelector
 	{
-		private IStorage _storage;
+		private IStorage<Seat, string> _storage;
 
-		public AskSeatService(IStorage storage)
+		public SeatSelector(IStorage<Seat, string> storage)
 		{
 			_storage = storage;
 		}
 
-        public (ColumnLetter, int, bool) AskSeat(int rowStart, int numberOfRows)
+        public async Task<Seat> AskSeat(int rowStart, int numberOfRows)
         {
             Console.WriteLine();
             Console.Write("Please enter the row number: ");
@@ -39,9 +40,13 @@ namespace AirControlReservation.Services
             }
             var seatColumnEnum = GetColumnLetter(seatColumn);
 
-            var seatTaken = _storage.Airplane.IsSeatTaken(rowNumber, seatColumnEnum);
+            var seat = await _storage.Get($"{rowNumber}{seatColumnEnum}");
 
-            return (seatColumnEnum, rowNumber, seatTaken);
+            return seat ?? new Seat()
+            {
+                Column = seatColumnEnum,
+                Row = rowNumber
+            };
         }
 
         private bool IsColumnSeatValid(char seatColunm)

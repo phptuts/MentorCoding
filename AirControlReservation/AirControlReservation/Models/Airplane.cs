@@ -12,10 +12,15 @@ public class Airplane
         return row.Seats.First(x => x.Column == seatColumn).Taken();
     }
 
-    public Passenger? GetPassenger(int rowNumber, ColumnLetter seatColumn)
+    public Seat GetSeat(int rowNumber, ColumnLetter seatColumn)
     {
         var row = Rows[rowNumber - 1];
-        return row.Seats.First(x => x.Column == seatColumn)?.Passenger ?? null;
+        return row.Seats.First(x => x.Column == seatColumn);
+    }
+
+    public Passenger? GetPassenger(int rowNumber, ColumnLetter seatColumn)
+    {
+        return GetSeat(rowNumber, seatColumn)?.Passenger ?? null;
     }
 
     public void Book(int rowNumber, ColumnLetter seatColumn, Passenger passenger)

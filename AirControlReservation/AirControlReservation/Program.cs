@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 var serviceCollection = new ServiceCollection();
 var serviceProvider = serviceCollection.AddSingleton<MainScreen, MainScreen>()
     .AddSingleton<SeatClassSelectionScreen, SeatClassSelectionScreen>()
-    .AddSingleton<IAskSeatService, AskSeatService>()
+    .AddSingleton<ISeatSelector, SeatSelector>()
     .AddSingleton<BusinessClassSeatSelection, BusinessClassSeatSelection>()
     .AddSingleton<EconomyClassSeatSelectionScreen, EconomyClassSeatSelectionScreen>()
     .AddSingleton<SeatVerificationScreen, SeatVerificationScreen>()

@@ -18,7 +18,7 @@ public class SeatClassSelectionScreen : Screen
         _serviceProvider = serviceProvider;
     }
 
-    public override ICommand? Execute()
+    public override Task<ICommand?> Execute()
     {
         DrawHeader();
         Console.WriteLine("Seat Class Selection");
@@ -44,7 +44,7 @@ public class SeatClassSelectionScreen : Screen
             char.TryParse(Console.ReadLine(), out option);
         }
 
-        return Menu.MenuItems[option].Command.Value;
+        return Task.FromResult(Menu.MenuItems[option].Command.Value);
     }
 }
 

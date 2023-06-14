@@ -2,30 +2,29 @@
 using Microsoft.Extensions.DependencyInjection;
 using AirControlReservation.Interfaces;
 using AirControlReservation.Enums;
+using AirControlReservation.Models;
 
 namespace AirControlReservation.Menus
 {
 	public class SeatVerificationScreen: Screen
 	{
         private IServiceProvider _serviceProvider { get; }
-        public IAskSeatService _askSeatService { get; }
-        public IStorage _storage { get; }
+        public ISeatSelector _seatSelector { get; }
 
-        public SeatVerificationScreen(IServiceProvider serviceProvider, IAskSeatService askSeatService, IStorage storage)
+        public SeatVerificationScreen(IServiceProvider serviceProvider, ISeatSelector seatSelector)
             : base("Seat Verification", new Menu("Seat Verification", "Please enter the row number: "))
 		{
 			_serviceProvider = serviceProvider;
-            _askSeatService = askSeatService;
-            _storage = storage;
+            _seatSelector = seatSelector;
 		}
 
-        public override ICommand? Execute()
+        public async override Task<ICommand?> Execute()
         {
-            var (seatLetter, row, seatExists) = _askSeatService.AskSeat(1, 40);
+            var seat = await _seatSelector.AskSeat(1, 40);
 
-            if (seatExists)
+            if (seat.Taken())
             {
-                var passenger = _storage.Airplane.GetPassenger(row, seatLetter);
+                var passenger = seat.Passenger;
                 Console.WriteLine($"Passenger Details");
                 Console.WriteLine($"Firstname: {passenger?.FirstName}");
                 Console.WriteLine($"Lastname: {passenger?.LastName}");

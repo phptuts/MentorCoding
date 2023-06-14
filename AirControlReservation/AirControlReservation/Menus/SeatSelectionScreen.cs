@@ -10,63 +10,62 @@ namespace AirControlReservation.Menus;
 public abstract class SeatSelectionScreen : Screen
 {
     private IServiceProvider _serviceProvider { get; }
-    public IStorage _storage { get; }
-    public IAskSeatService _askSeatService { get; }
+    public IStorage<Seat, string> _storage { get; }
+    public ISeatSelector _seatSelector { get; }
     public int RowStart { get;  }
 
     public int NumberOfRows { get;  }
 
-    public SeatSelectionScreen(IServiceProvider serviceProvider, IStorage storage, IAskSeatService askSeatService, int rowStart, int numberOfRows, string title) :
+    public SeatSelectionScreen(IServiceProvider serviceProvider, IStorage<Seat, string> storage, ISeatSelector seatSelector, int rowStart, int numberOfRows, string title) :
         base(title, new Menu(title, "Please enter the row number: "))
     {
         _serviceProvider = serviceProvider;
         _storage = storage;
-        _askSeatService = askSeatService;
+        _seatSelector = seatSelector;
         RowStart = rowStart;
         NumberOfRows = numberOfRows;
     }
 
-    public override ICommand? Execute()
+    public override async Task<ICommand?> Execute()
     {
         Console.WriteLine();
         DrawHeader();
         PrintSeats();
 
-        var (columnLetter, rowNumber) = FindSeat();
+        var seat = await FindSeat();
         Console.Write("Please enter the passenger's firstname: ");
         var firstName = Console.ReadLine() ?? " ";
         Console.Write("Please enter the passenger's lastname: ");
         var lastName = Console.ReadLine() ?? " ";
         Console.Write("Please enter the passenger's passport number: ");
         var passPortNumber = Console.ReadLine() ?? " ";
-        _storage.Airplane.Book(rowNumber, columnLetter, new Passenger()
+        seat.Passenger = new Passenger()
         {
             FirstName = firstName,
             LastName = lastName,
             PassPortNumber = passPortNumber
-        });
-        // TODO REFACTOR TO BOOK METHOD IN ISTORAGE
-        _storage.Save();
+        };
+        await _storage.Create(seat);
         Console.WriteLine();
-        Console.WriteLine($"Seat {rowNumber}{columnLetter} was successfully booked!");
+        Console.WriteLine($"Seat {seat.Row}{seat.Column} was successfully booked!");
         Console.WriteLine();
 
         return _serviceProvider.GetService<MainScreen>();
     }
 
-    protected (ColumnLetter, int) FindSeat()
+    protected async Task<Seat> FindSeat()
     {
         
         while(true)
         {
-            var (seatColumn, rowNumber, isTaken) = _askSeatService.AskSeat(RowStart, NumberOfRows);
+            var seat = await _seatSelector.AskSeat(RowStart, NumberOfRows);
 
-            if (!isTaken)
+            if (!seat.Taken())
             {
-                return (seatColumn, rowNumber);
+                return seat;
             }
 
-            Console.WriteLine($"Sorry seat {rowNumber}{seatColumn} is already taken.");
+            Console.WriteLine($"Sorry seat {seat.Row}{seat.Column} is already taken.");
         }
     }
 

@@ -19,7 +19,7 @@ public class MainScreen: Screen
         Menu.AddMenuItem('X', new MenuItem('X', "Exit the System", new Lazy<ICommand>(() => null)));
     }
 
-    public override ICommand? Execute()
+    public override Task<ICommand?> Execute()
     {
         DrawHeader();
         Console.WriteLine("Task Selection");
@@ -45,7 +45,7 @@ public class MainScreen: Screen
             char.TryParse(Console.ReadLine(), out option);
         }
 
-        return Menu.MenuItems[option].Command.Value;
+        return Task.FromResult(Menu.MenuItems[option].Command.Value);
     }
 }
 
