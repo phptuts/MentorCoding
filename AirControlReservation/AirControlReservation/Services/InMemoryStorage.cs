@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace AirControlReservation.Services;
 
 
-public class SaveMemoryService : IStorage<Seat, string>
+public class InMemoryStorage : IStorage<Seat, string>
 {
     private List<Seat> Seats = new List<Seat>();
 

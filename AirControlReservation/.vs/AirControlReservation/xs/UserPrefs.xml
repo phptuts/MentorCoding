@@ -1,38 +1,41 @@
 ﻿<Properties StartupConfiguration="{5B83F1C5-CB54-4E1B-928A-2F2B9FCD56E1}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AirControlReservation/Menus/SeatSelectionScreen.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.AirControlReservation PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirControlReservation/Screens/SeatVerificationScreen.cs">
     <Files>
-      <File FileName="AirControlReservation/Services/SaveFileService.cs" Line="55" Column="9" />
-      <File FileName="AirControlReservation/Models/Seat.cs" Line="12" Column="30" />
-      <File FileName="AirControlReservation/Interfaces/IStorage.cs" Line="10" Column="23" />
-      <File FileName="AirControlReservation/Services/SaveMemoryService.cs" Line="8" Column="1" />
-      <File FileName="AirControlReservation/Services/SeatSelector.cs" Line="18" Column="31" />
-      <File FileName="AirControlReservation/Menus/SeatSelectionScreen.cs" Line="80" Column="43" />
-      <File FileName="AirControlReservation/Menus/SeatVerificationScreen.cs" Line="23" Column="46" />
-      <File FileName="AirControlReservation/Menus/SeatClassSelectionScreen.cs" Line="17" Column="91" />
-      <File FileName="AirControlReservation/Interfaces/ISeatSelector.cs" Line="9" Column="19" />
-      <File FileName="AirControlReservation/Menus/Screen.cs" Line="17" Column="36" />
-      <File FileName="AirControlReservation/Interfaces/ICommand.cs" Line="6" Column="24" />
-      <File FileName="AirControlReservation/Menus/MenuItem.cs" Line="1" Column="1" />
-      <File FileName="AirControlReservation/Menus/EconomyClassSeatSelectionScreen.cs" Line="9" Column="99" />
-      <File FileName="AirControlReservation/Menus/BusinessClassSeatSelection.cs" Line="10" Column="98" />
-      <File FileName="AirControlReservation/Menus/MainScreen.cs" Line="48" Column="16" />
-      <File FileName="AirControlReservation/Models/Passenger.cs" Line="10" Column="19" />
+      <File FileName="AirControlReservation/Services/SaveFileService.cs" Line="12" Column="26" />
+      <File FileName="AirControlReservation/Models/Seat.cs" />
+      <File FileName="AirControlReservation/Interfaces/IStorage.cs" />
+      <File FileName="AirControlReservation/Services/SaveMemoryService.cs" Line="11" Column="17" />
+      <File FileName="AirControlReservation/Services/SeatSelector.cs" Line="43" Column="50" />
+      <File FileName="AirControlReservation/Menus/SeatSelectionScreen.cs" Line="9" Column="40" />
+      <File FileName="AirControlReservation/Menus/SeatVerificationScreen.cs" Line="7" Column="1" />
+      <File FileName="AirControlReservation/Menus/SeatClassSelectionScreen.cs" Line="6" Column="1" />
+      <File FileName="AirControlReservation/Interfaces/ISeatSelector.cs" Line="7" Column="28" />
+      <File FileName="AirControlReservation/Menus/Screen.cs" Line="4" Column="1" />
+      <File FileName="AirControlReservation/Interfaces/ICommand.cs" />
+      <File FileName="AirControlReservation/Menus/MenuItem.cs" />
+      <File FileName="AirControlReservation/Menus/EconomyClassSeatSelectionScreen.cs" Line="4" Column="1" />
+      <File FileName="AirControlReservation/Menus/BusinessClassSeatSelection.cs" Line="6" Column="1" />
+      <File FileName="AirControlReservation/Menus/MainScreen.cs" Line="7" Column="1" />
+      <File FileName="AirControlReservation/Models/Passenger.cs" />
+      <File FileName="AirControlReservation/Program.cs" Line="18" Column="54" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AirControlReservation" expanded="True">
             <Node name="AirControlReservation" expanded="True">
-              <Node name="Constants" expanded="True" />
-              <Node name="Enums" expanded="True" />
-              <Node name="Factories" expanded="True" />
-              <Node name="Interfaces" expanded="True" />
-              <Node name="Menus" expanded="True">
-                <Node name="SeatSelectionScreen.cs" selected="True" />
-              </Node>
+              <Node name="Menus" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="Screens" expanded="True">
+                <Node name="SeatVerificationScreen.cs" selected="True" />
+              </Node>
               <Node name="Services" expanded="True" />
             </Node>
           </Node>
@@ -40,9 +43,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.AirControlReservation PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

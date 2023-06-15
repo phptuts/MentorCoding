@@ -2,8 +2,9 @@
 using Microsoft.Extensions.DependencyInjection;
 using AirControlReservation.Interfaces;
 using AirControlReservation.Constants;
+using AirControlReservation.Menus;
 
-namespace AirControlReservation.Menus;
+namespace AirControlReservation.Screens;
 
 public class SeatClassSelectionScreen : Screen
 {

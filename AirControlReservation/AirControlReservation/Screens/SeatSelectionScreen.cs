@@ -4,8 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 using AirControlReservation.Interfaces;
 using AirControlReservation.Models;
 using AirControlReservation.Enums;
+using AirControlReservation.Menus;
 
-namespace AirControlReservation.Menus;
+namespace AirControlReservation.Screens;
 
 public abstract class SeatSelectionScreen : Screen
 {
@@ -30,7 +31,7 @@ public abstract class SeatSelectionScreen : Screen
     {
         Console.WriteLine();
         DrawHeader();
-        PrintSeats();
+        await PrintSeats();
 
         var seat = await FindSeat();
         Console.Write("Please enter the passenger's firstname: ");
@@ -71,15 +72,16 @@ public abstract class SeatSelectionScreen : Screen
 
 
 
-    protected void PrintSeats()
+    protected async Task PrintSeats()
     {
         Console.WriteLine("    A B C D E");
         for (var i = RowStart; i < RowStart + NumberOfRows; i += 1)
         {
             Console.Write($"  {i} ");
-            foreach (var seat in _storage.Airplane.Rows[i - 1].Seats)
+            foreach (var columnLetter in Enum.GetValues<ColumnLetter>())
             {
-                Console.Write(seat.Taken() ? "X" : " ");
+                var seat = await _storage.Get($"{i}{columnLetter}");
+                Console.Write(seat is Seat ? "X" : " ");
                 Console.Write(" ");
             }
             Console.WriteLine();

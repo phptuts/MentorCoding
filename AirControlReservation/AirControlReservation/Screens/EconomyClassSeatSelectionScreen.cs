@@ -1,8 +1,8 @@
 ﻿using System;
-namespace AirControlReservation.Menus;
 using AirControlReservation.Interfaces;
 using AirControlReservation.Models;
 
+namespace AirControlReservation.Screens;
 
 public class EconomyClassSeatSelectionScreen: SeatSelectionScreen
 {

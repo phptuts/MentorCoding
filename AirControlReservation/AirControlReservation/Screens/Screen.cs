@@ -1,6 +1,8 @@
 ﻿using System;
 using AirControlReservation.Interfaces;
-namespace AirControlReservation.Menus;
+using AirControlReservation.Menus;
+
+namespace AirControlReservation.Screens;
 
 public abstract class Screen : ICommand
 {

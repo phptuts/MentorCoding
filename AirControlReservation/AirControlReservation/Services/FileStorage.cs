@@ -9,7 +9,7 @@ using AirControlReservation.Factories;
 
 namespace AirControlReservation.Services;
 
-public class SaveFileService: IStorage<Seat, string>
+public class FileStorage : IStorage<Seat, string>
 {
     public static readonly string FILE_NAME = "airplane.json";
 

@@ -4,7 +4,9 @@ using AirControlReservation;
 using AirControlReservation.Menus;
 using AirControlReservation.Interfaces;
 using AirControlReservation.Services;
+using AirControlReservation.Models;
 using Microsoft.Extensions.DependencyInjection;
+using AirControlReservation.Screens;
 
 var serviceCollection = new ServiceCollection();
 var serviceProvider = serviceCollection.AddSingleton<MainScreen, MainScreen>()
@@ -13,12 +15,12 @@ var serviceProvider = serviceCollection.AddSingleton<MainScreen, MainScreen>()
     .AddSingleton<BusinessClassSeatSelection, BusinessClassSeatSelection>()
     .AddSingleton<EconomyClassSeatSelectionScreen, EconomyClassSeatSelectionScreen>()
     .AddSingleton<SeatVerificationScreen, SeatVerificationScreen>()
-    .AddSingleton<IStorage, SaveFileService>()
+    .AddSingleton<IStorage<Seat, string>, FileStorage>()
 .BuildServiceProvider();
 ICommand? currentScreen = serviceProvider.GetService<MainScreen>();
 do
 {
-    currentScreen = currentScreen?.Execute();
+    currentScreen = await currentScreen?.Execute();
 } while (currentScreen != null);
 
 Console.WriteLine("Good Bye!");

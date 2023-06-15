@@ -19,6 +19,7 @@
     <None Remove="Interfaces\" />
     <None Remove="Constants\" />
     <None Remove="Enums\" />
+    <None Remove="Screens\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Menus\" />
@@ -28,5 +29,6 @@
     <Folder Include="Interfaces\" />
     <Folder Include="Constants\" />
     <Folder Include="Enums\" />
+    <Folder Include="Screens\" />
   </ItemGroup>
 </Project>
