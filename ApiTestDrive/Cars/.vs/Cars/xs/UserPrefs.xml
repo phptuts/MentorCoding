@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{4A8A3AFB-3B95-4C6F-861F-78C33331CE4C}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Cars PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cars/Database/CarDbContext.cs">
+    <Files>
+      <File FileName="Cars/Controllers/WeatherForecastController.cs" Line="1" Column="1" />
+      <File FileName="Cars/appsettings.json" Line="10" Column="51" />
+      <File FileName="Cars/Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="Cars/docker-composer.yml" Line="7" Column="34" />
+      <File FileName="Cars/.env" Line="1" Column="25" />
+      <File FileName="Cars/Program.cs" Line="1" Column="1" />
+      <File FileName="Cars/Database/DbContext.cs" Line="6" Column="35" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Cars" expanded="True">
+            <Node name="Cars" expanded="True">
+              <Node name="Database" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
