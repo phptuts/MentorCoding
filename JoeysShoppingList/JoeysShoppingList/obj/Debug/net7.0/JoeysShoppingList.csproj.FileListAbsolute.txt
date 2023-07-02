@@ -1,0 +1,15 @@
+/Users/noahglaser/Projects/MentorCoding/JoeysShoppingList/JoeysShoppingList/obj/Debug/net7.0/JoeysShoppingList.csproj.AssemblyReference.cache
+/Users/noahglaser/Projects/MentorCoding/JoeysShoppingList/JoeysShoppingList/obj/Debug/net7.0/JoeysShoppingList.GeneratedMSBuildEditorConfig.editorconfig
+/Users/noahglaser/Projects/MentorCoding/JoeysShoppingList/JoeysShoppingList/obj/Debug/net7.0/JoeysShoppingList.AssemblyInfoInputs.cache
+/Users/noahglaser/Projects/MentorCoding/JoeysShoppingList/JoeysShoppingList/obj/Debug/net7.0/JoeysShoppingList.AssemblyInfo.cs
+/Users/noahglaser/Projects/MentorCoding/JoeysShoppingList/JoeysShoppingList/obj/Debug/net7.0/JoeysShoppingList.csproj.CoreCompileInputs.cache
+/Users/noahglaser/Projects/MentorCoding/JoeysShoppingList/JoeysShoppingList/bin/Debug/net7.0/JoeysShoppingList
+/Users/noahglaser/Projects/MentorCoding/JoeysShoppingList/JoeysShoppingList/bin/Debug/net7.0/JoeysShoppingList.deps.json
+/Users/noahglaser/Projects/MentorCoding/JoeysShoppingList/JoeysShoppingList/bin/Debug/net7.0/JoeysShoppingList.runtimeconfig.json
+/Users/noahglaser/Projects/MentorCoding/JoeysShoppingList/JoeysShoppingList/bin/Debug/net7.0/JoeysShoppingList.dll
+/Users/noahglaser/Projects/MentorCoding/JoeysShoppingList/JoeysShoppingList/bin/Debug/net7.0/JoeysShoppingList.pdb
+/Users/noahglaser/Projects/MentorCoding/JoeysShoppingList/JoeysShoppingList/obj/Debug/net7.0/JoeysShoppingList.dll
+/Users/noahglaser/Projects/MentorCoding/JoeysShoppingList/JoeysShoppingList/obj/Debug/net7.0/refint/JoeysShoppingList.dll
+/Users/noahglaser/Projects/MentorCoding/JoeysShoppingList/JoeysShoppingList/obj/Debug/net7.0/JoeysShoppingList.pdb
+/Users/noahglaser/Projects/MentorCoding/JoeysShoppingList/JoeysShoppingList/obj/Debug/net7.0/JoeysShoppingList.genruntimeconfig.cache
+/Users/noahglaser/Projects/MentorCoding/JoeysShoppingList/JoeysShoppingList/obj/Debug/net7.0/ref/JoeysShoppingList.dll

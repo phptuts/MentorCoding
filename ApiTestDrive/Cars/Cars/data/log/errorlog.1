@@ -1,0 +1,365 @@
+2023-06-19 23:46:07.33 Server      Microsoft SQL Server 2022 (RTM-CU5) (KB5026806) - 16.0.4045.3 (X64) 
+	May 26 2023 12:52:08 
+	Copyright (C) 2022 Microsoft Corporation
+	Developer Edition (64-bit) on Linux (Ubuntu 20.04.6 LTS) <X64>
+2023-06-19 23:46:07.33 Server      UTC adjustment: 0:00
+2023-06-19 23:46:07.33 Server      (c) Microsoft Corporation.
+2023-06-19 23:46:07.33 Server      All rights reserved.
+2023-06-19 23:46:07.34 Server      Server process ID is 412.
+2023-06-19 23:46:07.34 Server      Logging SQL Server messages in file '/var/opt/mssql/log/errorlog'.
+2023-06-19 23:46:07.34 Server      Registry startup parameters: 
+	 -d /var/opt/mssql/data/master.mdf
+	 -l /var/opt/mssql/data/mastlog.ldf
+	 -e /var/opt/mssql/log/errorlog
+2023-06-19 23:46:07.35 Server      SQL Server detected 6 sockets with 1 cores per socket and 1 logical processors per socket, 6 total logical processors; using 6 logical processors based on SQL Server licensing. This is an informational message; no user action is required.
+2023-06-19 23:46:07.36 Server      SQL Server is starting at normal priority base (=7). This is an informational message only. No user action is required.
+2023-06-19 23:46:07.36 Server      Detected 1588 MB of RAM. This is an informational message; no user action is required.
+2023-06-19 23:46:07.36 Server      Using conventional memory in the memory manager.
+2023-06-19 23:46:07.36 Server      Detected pause instruction latency: 32 cycles.
+2023-06-19 23:46:07.37 Server      Page exclusion bitmap is enabled.
+2023-06-19 23:46:07.40 Server      Buffer pool extension is not supported on Linux platform.
+2023-06-19 23:46:07.42 Server      Buffer Pool: Allocating 262144 bytes for 152996 hashPages.
+2023-06-19 23:46:07.69 Server      Buffer pool extension is already disabled. No action is necessary.
+2023-06-19 23:46:08.27 Server      Installing Client TLS certificates to the store.
+2023-06-19 23:46:08.29 Server      Error searching first file in /var/opt/mssql/security/ca-certificates: 3(The system cannot find the path specified.)
+2023-06-19 23:46:08.29 Server      CPU vectorization level(s) detected:  SSE SSE2 SSE3 SSSE3 SSE41 SSE42 AVX POPCNT
+2023-06-19 23:46:08.36 Server      Successfully initialized the TLS configuration. Allowed TLS protocol versions are ['1.0 1.1 1.2']. Allowed TLS ciphers are ['ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA'].
+2023-06-19 23:46:08.42 Server      Query Store settings initialized with enabled = 1, 
+2023-06-19 23:46:08.45 Server      The maximum number of dedicated administrator connections for this instance is '1'
+2023-06-19 23:46:08.46 Server      Node configuration: node 0: CPU mask: 0x000000000000003f:0 Active CPU mask: 0x000000000000003f:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.
+2023-06-19 23:46:08.47 Server      Using dynamic lock allocation.  Initial allocation of 2500 Lock blocks and 5000 Lock Owner blocks per node.  This is an informational message only.  No user action is required.
+2023-06-19 23:46:08.53 Server      In-Memory OLTP initialized on lowend machine.
+2023-06-19 23:46:08.62 Server      CLR version v4.0.30319 loaded.
+2023-06-19 23:46:08.76 Server      [INFO] Created Extended Events session 'hkenginexesession'
+2023-06-19 23:46:08.77 Server      Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+2023-06-19 23:46:08.97 Server      Total Log Writer threads: 2, Node CPUs: 3, Nodes: 1, Log Writer threads per CPU: 1, Log Writer threads per Node: 2
+2023-06-19 23:46:08.99 Server      clflush is selected for pmem flush operation.
+2023-06-19 23:46:09.02 Server      Software Usage Metrics is disabled.
+2023-06-19 23:46:09.07 spid22s     [1]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2023-06-19 23:46:09.08 spid22s     Starting up database 'master'.
+2023-06-19 23:46:09.65 Server      Common language runtime (CLR) functionality initialized.
+2023-06-19 23:46:10.45 spid22s     [32762]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2023-06-19 23:46:10.46 spid22s     Starting up database 'model_replicatedmaster'.
+2023-06-19 23:46:10.47 spid25s     [32767]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2023-06-19 23:46:10.47 spid25s     Starting up database 'mssqlsystemresource'.
+2023-06-19 23:46:10.48 spid25s     The resource database build version is 16.00.4045. This is an informational message only. No user action is required.
+2023-06-19 23:46:10.59 spid25s     [3]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2023-06-19 23:46:10.60 spid25s     Starting up database 'model'.
+2023-06-19 23:46:11.68 spid32s     A self-generated certificate was successfully loaded for encryption.
+2023-06-19 23:46:11.69 spid32s     Server is listening on [ 'any' <ipv6> 1433] accept sockets 1.
+2023-06-19 23:46:11.70 spid32s     Server is listening on [ 'any' <ipv4> 1433] accept sockets 1.
+2023-06-19 23:46:11.71 Server      Server is listening on [ ::1 <ipv6> 1434] accept sockets 1.
+2023-06-19 23:46:11.72 Server      Server is listening on [ 127.0.0.1 <ipv4> 1434] accept sockets 1.
+2023-06-19 23:46:11.72 Server      Dedicated admin connection support was established for listening locally on port 1434.
+2023-06-19 23:46:11.72 spid32s     Server is listening on [ ::1 <ipv6> 1431] accept sockets 1.
+2023-06-19 23:46:11.73 spid32s     Server is listening on [ 127.0.0.1 <ipv4> 1431] accept sockets 1.
+2023-06-19 23:46:11.75 spid32s     SQL Server is now ready for client connections. This is an informational message; no user action is required.
+2023-06-19 23:46:11.81 spid22s     [32761]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2023-06-19 23:46:11.82 spid22s     Starting up database 'model_msdb'.
+2023-06-19 23:46:12.68 spid22s     Resource governor reconfiguration succeeded.
+2023-06-19 23:46:12.69 spid22s     SQL Server Audit is starting the audits. This is an informational message. No user action is required.
+2023-06-19 23:46:12.69 spid34s     External governance manager initialized
+2023-06-19 23:46:12.70 spid34s     Attribute synchronization manager initialized
+2023-06-19 23:46:12.70 spid22s     SQL Server Audit has started the audits. This is an informational message. No user action is required.
+2023-06-19 23:46:12.72 spid22s     XE session 'system_health' started.
+2023-06-19 23:46:12.86 spid22s     XE session 'telemetry_xevents' started.
+2023-06-19 23:46:12.92 spid22s     SQL Trace ID 1 was started by login "sa".
+2023-06-19 23:46:12.93 spid22s     Server name is '1d8b1ac5a40b'. This is an informational message only. No user action is required.
+2023-06-19 23:46:12.97 spid25s     Clearing tempdb database.
+2023-06-19 23:46:12.98 spid51s     Always On: The availability replica manager is starting. This is an informational message only. No user action is required.
+2023-06-19 23:46:12.98 spid51s     Always On: The availability replica manager is waiting for the instance of SQL Server to allow client connections. This is an informational message only. No user action is required.
+2023-06-19 23:46:13.00 spid54s     [4]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2023-06-19 23:46:13.00 spid55s     [5]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2023-06-19 23:46:13.01 spid54s     Starting up database 'msdb'.
+2023-06-19 23:46:13.02 spid55s     Starting up database 'Cars'.
+2023-06-19 23:46:13.03 spid55s     RemoveStaleDbEntries: Cleanup of stale DB entries called for database ID: [5]
+2023-06-19 23:46:13.03 spid55s     RemoveStaleDbEntries: Cleanup of stale DB entries skipped because master db is not memory optimized. DbId: 5.
+2023-06-19 23:46:13.95 spid55s     Parallel redo is started for database 'Cars' with worker pool size [3].
+2023-06-19 23:46:14.05 spid23s     Using 'dbghelp.dll' version '4.0.5'
+2023-06-19 23:46:14.10 spid55s     Parallel redo is shutdown for database 'Cars' with worker pool size [3].
+2023-06-19 23:46:15.16 spid25s     [2]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2023-06-19 23:46:15.17 spid25s     Starting up database 'tempdb'.
+2023-06-19 23:46:20.04 spid25s     The tempdb database has 6 data file(s).
+2023-06-19 23:46:20.06 spid51s     The Service Broker endpoint is in disabled or stopped state.
+2023-06-19 23:46:20.06 spid51s     The Database Mirroring endpoint is in disabled or stopped state.
+2023-06-19 23:46:20.08 spid51s     Service Broker manager has started.
+2023-06-19 23:46:20.09 spid22s     Recovery is complete. This is an informational message only. No user action is required.
+2023-06-19 23:51:10.89 spid64      XE session 'telemetry_xevents' stopping.
+2023-06-19 23:51:10.91 spid64      XE session 'telemetry_xevents' started.
+2023-06-19 23:53:02.31 spid64      Attempting to load library 'xplog70.dll' into memory. This is an informational message only. No user action is required.
+2023-06-19 23:53:02.43 spid64      Using 'xplog70.dll' version '2022.160.4045' to execute extended stored procedure 'xp_msver'. This is an informational message only; no user action is required.
+2023-06-20 00:02:54.93 spid64      XE session 'telemetry_xevents' stopping.
+2023-06-20 00:02:54.95 spid64      XE session 'telemetry_xevents' started.
+2023-06-20 00:46:04.16 spid13s     [DevOpsSnapshotTelemetryTask] Evaluating the background task.
+2023-06-20 01:02:53.31 spid61      XE session 'telemetry_xevents' stopping.
+2023-06-20 01:02:53.33 spid61      XE session 'telemetry_xevents' started.
+2023-06-20 02:02:53.17 spid61      XE session 'telemetry_xevents' stopping.
+2023-06-20 02:02:53.19 spid61      XE session 'telemetry_xevents' started.
+2023-06-20 03:02:56.49 spid61      XE session 'telemetry_xevents' stopping.
+2023-06-20 03:02:56.51 spid61      XE session 'telemetry_xevents' started.
+2023-06-20 04:02:56.82 spid61      XE session 'telemetry_xevents' stopping.
+2023-06-20 04:02:56.84 spid61      XE session 'telemetry_xevents' started.
+2023-06-20 05:02:57.48 spid61      XE session 'telemetry_xevents' stopping.
+2023-06-20 05:02:57.49 spid61      XE session 'telemetry_xevents' started.
+2023-06-20 06:02:59.85 spid61      XE session 'telemetry_xevents' stopping.
+2023-06-20 06:02:59.87 spid61      XE session 'telemetry_xevents' started.
+2023-06-20 07:03:00.79 spid61      XE session 'telemetry_xevents' stopping.
+2023-06-20 07:03:00.81 spid61      XE session 'telemetry_xevents' started.
+2023-06-20 08:02:59.28 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 08:02:59.30 spid58      XE session 'telemetry_xevents' started.
+2023-06-20 09:02:59.54 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 09:02:59.56 spid58      XE session 'telemetry_xevents' started.
+2023-06-20 10:02:58.67 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 10:02:58.69 spid58      XE session 'telemetry_xevents' started.
+2023-06-20 11:03:00.41 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 11:03:00.43 spid58      XE session 'telemetry_xevents' started.
+2023-06-20 12:03:02.22 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 12:03:02.24 spid58      XE session 'telemetry_xevents' started.
+2023-06-20 13:03:05.83 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 13:03:05.85 spid58      XE session 'telemetry_xevents' started.
+2023-06-20 14:03:06.69 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 14:03:06.71 spid58      XE session 'telemetry_xevents' started.
+2023-06-20 14:27:21.39 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.39 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.39 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.39 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.39 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.39 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.39 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.39 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.39 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.39 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.42 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.42 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.42 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.42 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.44 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.44 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.44 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.44 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.44 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.44 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.44 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.44 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.45 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.45 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.46 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.46 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.47 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.47 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.47 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.47 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.49 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.49 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.49 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.49 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.50 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-20 14:27:21.50 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.50 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-20 14:27:21.50 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.52 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-20 14:27:21.52 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.52 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-20 14:27:21.52 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.52 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-20 14:27:21.52 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.53 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-20 14:27:21.53 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.53 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-20 14:27:21.53 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.57 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-20 14:27:21.57 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.57 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-20 14:27:21.57 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.57 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-20 14:27:21.57 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.57 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-20 14:27:21.57 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.57 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-20 14:27:21.57 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 14:27:21.58 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-20 14:27:21.58 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-20 15:03:06.96 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 15:03:06.98 spid58      XE session 'telemetry_xevents' started.
+2023-06-20 16:03:10.99 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 16:03:11.01 spid58      XE session 'telemetry_xevents' started.
+2023-06-20 17:03:11.41 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 17:03:11.43 spid58      XE session 'telemetry_xevents' started.
+2023-06-20 18:03:14.57 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 18:03:14.59 spid58      XE session 'telemetry_xevents' started.
+2023-06-20 19:03:13.74 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 19:03:13.76 spid58      XE session 'telemetry_xevents' started.
+2023-06-20 20:03:16.32 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 20:03:16.34 spid58      XE session 'telemetry_xevents' started.
+2023-06-20 21:03:16.91 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 21:03:16.93 spid58      XE session 'telemetry_xevents' started.
+2023-06-20 22:03:20.71 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 22:03:20.73 spid58      XE session 'telemetry_xevents' started.
+2023-06-20 23:03:20.01 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-20 23:03:20.03 spid58      XE session 'telemetry_xevents' started.
+2023-06-21 00:10:52.02 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-21 00:10:52.04 spid58      XE session 'telemetry_xevents' started.
+2023-06-21 01:10:53.00 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-21 01:10:53.02 spid58      XE session 'telemetry_xevents' started.
+2023-06-21 02:10:56.26 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-21 02:10:56.28 spid58      XE session 'telemetry_xevents' started.
+2023-06-21 03:10:56.69 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-21 03:10:56.71 spid58      XE session 'telemetry_xevents' started.
+2023-06-21 04:10:58.87 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-21 04:10:58.90 spid58      XE session 'telemetry_xevents' started.
+2023-06-21 05:19:22.91 spid60      XE session 'telemetry_xevents' stopping.
+2023-06-21 05:19:22.93 spid60      XE session 'telemetry_xevents' started.
+2023-06-21 06:19:23.43 spid67      XE session 'telemetry_xevents' stopping.
+2023-06-21 06:19:23.46 spid67      XE session 'telemetry_xevents' started.
+2023-06-21 14:56:11.81 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-21 14:56:11.83 spid58      XE session 'telemetry_xevents' started.
+2023-06-21 15:56:11.57 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-21 15:56:11.59 spid58      XE session 'telemetry_xevents' started.
+2023-06-21 16:56:12.93 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-21 16:56:12.95 spid58      XE session 'telemetry_xevents' started.
+2023-06-21 17:56:15.05 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-21 17:56:15.07 spid58      XE session 'telemetry_xevents' started.
+2023-06-21 18:56:15.78 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-21 18:56:15.80 spid58      XE session 'telemetry_xevents' started.
+2023-06-21 19:56:16.15 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-21 19:56:16.16 spid58      XE session 'telemetry_xevents' started.
+2023-06-21 20:56:18.12 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-21 20:56:18.15 spid58      XE session 'telemetry_xevents' started.
+2023-06-21 21:56:21.09 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-21 21:56:21.11 spid58      XE session 'telemetry_xevents' started.
+2023-06-21 22:56:21.16 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-21 22:56:21.17 spid58      XE session 'telemetry_xevents' started.
+2023-06-21 23:56:21.57 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-21 23:56:21.59 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 00:56:23.20 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 00:56:23.22 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 01:56:24.26 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 01:56:24.28 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 02:56:25.98 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 02:56:26.00 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 03:56:25.44 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 03:56:25.46 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 04:56:24.70 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 04:56:24.73 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 05:56:23.21 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 05:56:23.23 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 06:56:24.20 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 06:56:24.23 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 08:03:06.44 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 08:03:06.46 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 09:03:08.24 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 09:03:08.26 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 10:03:08.66 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 10:03:08.68 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 11:03:09.06 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 11:03:09.08 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 12:03:08.46 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 12:03:08.48 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 13:03:07.66 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 13:03:07.68 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 14:03:09.27 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 14:03:09.29 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 15:03:09.47 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 15:03:09.49 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 16:03:11.10 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-22 16:03:11.12 spid58      XE session 'telemetry_xevents' started.
+2023-06-22 17:03:11.55 spid62      XE session 'telemetry_xevents' stopping.
+2023-06-22 17:03:11.57 spid62      XE session 'telemetry_xevents' started.
+2023-06-22 18:03:13.75 spid61      XE session 'telemetry_xevents' stopping.
+2023-06-22 18:03:13.77 spid61      XE session 'telemetry_xevents' started.
+2023-06-22 19:03:12.51 spid59      XE session 'telemetry_xevents' stopping.
+2023-06-22 19:03:12.53 spid59      XE session 'telemetry_xevents' started.
+2023-06-22 20:03:16.36 spid62      XE session 'telemetry_xevents' stopping.
+2023-06-22 20:03:16.38 spid62      XE session 'telemetry_xevents' started.
+2023-06-22 21:03:16.72 spid62      XE session 'telemetry_xevents' stopping.
+2023-06-22 21:03:16.76 spid62      XE session 'telemetry_xevents' started.
+2023-06-22 22:03:18.50 spid63      XE session 'telemetry_xevents' stopping.
+2023-06-22 22:03:18.53 spid63      XE session 'telemetry_xevents' started.
+2023-06-22 23:03:25.94 spid61      XE session 'telemetry_xevents' stopping.
+2023-06-22 23:03:25.96 spid61      XE session 'telemetry_xevents' started.
+2023-06-23 00:03:27.32 spid60      XE session 'telemetry_xevents' stopping.
+2023-06-23 00:03:27.34 spid60      XE session 'telemetry_xevents' started.
+2023-06-23 01:03:26.64 spid60      XE session 'telemetry_xevents' stopping.
+2023-06-23 01:03:26.65 spid60      XE session 'telemetry_xevents' started.
+2023-06-23 02:03:26.37 spid59      XE session 'telemetry_xevents' stopping.
+2023-06-23 02:03:26.40 spid59      XE session 'telemetry_xevents' started.
+2023-06-23 03:03:26.91 spid59      XE session 'telemetry_xevents' stopping.
+2023-06-23 03:03:26.93 spid59      XE session 'telemetry_xevents' started.
+2023-06-23 04:03:30.05 spid59      XE session 'telemetry_xevents' stopping.
+2023-06-23 04:03:30.07 spid59      XE session 'telemetry_xevents' started.
+2023-06-23 05:03:33.53 spid59      XE session 'telemetry_xevents' stopping.
+2023-06-23 05:03:33.56 spid59      XE session 'telemetry_xevents' started.
+2023-06-23 06:03:33.11 spid61      XE session 'telemetry_xevents' stopping.
+2023-06-23 06:03:33.13 spid61      XE session 'telemetry_xevents' started.
+2023-06-23 07:03:32.59 spid61      XE session 'telemetry_xevents' stopping.
+2023-06-23 07:03:32.61 spid61      XE session 'telemetry_xevents' started.
+2023-06-23 08:13:55.34 spid61      XE session 'telemetry_xevents' stopping.
+2023-06-23 08:13:55.36 spid61      XE session 'telemetry_xevents' started.
+2023-06-23 09:13:54.74 spid60      XE session 'telemetry_xevents' stopping.
+2023-06-23 09:13:54.78 spid60      XE session 'telemetry_xevents' started.
+2023-06-23 15:06:12.99 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-23 15:06:13.05 spid58      XE session 'telemetry_xevents' started.
+2023-06-23 16:58:56.12 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-23 16:58:56.19 spid58      XE session 'telemetry_xevents' started.
+2023-06-24 05:54:28.77 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-24 05:54:28.78 spid58      XE session 'telemetry_xevents' started.
+2023-06-24 14:32:51.15 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-24 14:32:51.18 spid58      XE session 'telemetry_xevents' started.
+2023-06-25 03:32:59.78 spid61      XE session 'telemetry_xevents' stopping.
+2023-06-25 03:32:59.80 spid61      XE session 'telemetry_xevents' started.
+2023-06-25 15:41:45.63 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-25 15:41:45.65 spid58      XE session 'telemetry_xevents' started.
+2023-06-25 17:11:17.20 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-25 17:11:17.22 spid58      XE session 'telemetry_xevents' started.
+2023-06-25 18:11:21.11 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-25 18:11:21.13 spid58      XE session 'telemetry_xevents' started.
+2023-06-26 03:31:56.33 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-26 03:31:56.35 spid58      XE session 'telemetry_xevents' started.
+2023-06-26 04:31:55.45 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-26 04:31:55.47 spid58      XE session 'telemetry_xevents' started.
+2023-06-26 05:38:17.74 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-26 05:38:17.76 spid58      XE session 'telemetry_xevents' started.
+2023-06-26 06:38:18.06 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-26 06:38:18.09 spid58      XE session 'telemetry_xevents' started.
+2023-06-26 17:13:01.57 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-26 17:13:01.58 spid58      XE session 'telemetry_xevents' started.
+2023-06-27 03:52:43.57 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-27 03:52:43.59 spid58      XE session 'telemetry_xevents' started.
+2023-06-27 04:52:47.08 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-27 04:52:47.10 spid58      XE session 'telemetry_xevents' started.
+2023-06-27 14:29:11.51 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-27 14:29:11.51 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-27 14:29:11.51 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-27 14:29:11.51 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-27 14:29:11.52 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-27 14:29:11.52 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-27 14:29:11.53 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-27 14:29:11.53 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-27 14:29:11.54 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-27 14:29:11.54 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-27 14:29:11.55 Logon       Error: 17836, Severity: 20, State: 17.
+2023-06-27 14:29:11.55 Logon       Length specified in network packet payload did not match number of bytes read; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-27 14:29:11.55 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-27 14:29:11.55 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-27 14:29:11.56 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-27 14:29:11.56 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-27 14:29:11.57 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-27 14:29:11.57 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-27 14:29:11.58 Logon       Error: 17832, Severity: 20, State: 18.
+2023-06-27 14:29:11.58 Logon       The login packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library. [CLIENT: 172.22.0.1]
+2023-06-28 05:12:09.51 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-28 05:12:09.53 spid58      XE session 'telemetry_xevents' started.
+2023-06-28 06:12:09.88 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-28 06:12:09.91 spid58      XE session 'telemetry_xevents' started.
+2023-06-28 14:47:25.56 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-28 14:47:25.58 spid58      XE session 'telemetry_xevents' started.
+2023-06-29 01:46:38.67 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-29 01:46:38.69 spid58      XE session 'telemetry_xevents' started.
+2023-06-29 02:46:45.44 spid62      XE session 'telemetry_xevents' stopping.
+2023-06-29 02:46:45.46 spid62      XE session 'telemetry_xevents' started.
+2023-06-29 03:46:49.27 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-29 03:46:49.29 spid58      XE session 'telemetry_xevents' started.
+2023-06-29 04:46:52.88 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-29 04:46:52.91 spid58      XE session 'telemetry_xevents' started.
+2023-06-29 05:53:06.68 spid58      XE session 'telemetry_xevents' stopping.
+2023-06-29 05:53:06.70 spid58      XE session 'telemetry_xevents' started.
