@@ -1,4 +1,28 @@
 ﻿<Properties StartupConfiguration="{3DFA4054-81CA-4243-A15D-297BCCE489C4}|Default">
-  <MonoDevelop.Ide.ItemProperties.JoeysShoppingList FirstBuild="True" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.JoeysShoppingList PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="JoeysShoppingList/Program.cs">
+    <Files>
+      <File FileName="JoeysShoppingList/Item.cs" Line="21" Column="36" />
+      <File FileName="JoeysShoppingList/StoreEnum.cs" Line="4" Column="8" />
+      <File FileName="JoeysShoppingList/Program.cs" Line="38" Column="1" />
+      <File FileName="JoeysShoppingList/ItemTotal.cs" Line="6" Column="92" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="JoeysShoppingList" expanded="True">
+            <Node name="JoeysShoppingList" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

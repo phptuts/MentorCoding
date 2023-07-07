@@ -20,19 +20,24 @@ List<Item> shoppingList = new()
     new Item("tissue", 8.45, 5, StoreEnum.CostCo),
 };
 
-void PrintSubTotal(List<Item> items)
+List<ItemTotal> PrintSubTotal(List<Item> items)
 {
-    items.ForEach(item =>
+    List<ItemTotal> itemTotals = items
+        .Select(x => new ItemTotal(x.Name, x.UnitPrice, x.Quantity, x.Store, x.Quantity * x.UnitPrice))
+        .ToList();
+    itemTotals.ForEach(item =>
     {
-        Console.WriteLine($"Name: {item.Name} | SubTotal: {item.SubTotal():c}");
+        Console.WriteLine($"Name: {item.Name} | SubTotal: {item.Total:c}");
     });
+
+    return itemTotals;
 }
 
-void GrandTotalReduce(List<Item> items)
+void GrandTotalReduce(List<ItemTotal> items)
 {
     var total = items.Aggregate(0.0, (acc, item) =>
     {
-        return acc + item.SubTotal();
+        return acc + item.Total;
     });
 
     Console.WriteLine($"Total: {total:c}");
@@ -41,9 +46,9 @@ void GrandTotalReduce(List<Item> items)
 void PrintItemsInStore(List<Item> items, StoreEnum store)
 {
     var storeItems = items.FindAll(x => x.Store == store).ToList();
-    storeItems.Sort((itemA, itemB) => string.Compare(itemA.Name, itemB.Name));
+    
     Console.WriteLine("Items: ");
-    storeItems.ForEach(item =>
+    storeItems.OrderBy(x => x.Name).ToList().ForEach(item =>
     {
         Console.Write($"{item.Name}, ");
     });
@@ -52,64 +57,21 @@ void PrintItemsInStore(List<Item> items, StoreEnum store)
 
 void PrintItemsByStore(List<Item> items)
 {
-    var listByStore =items.Aggregate(new Dictionary<StoreEnum, List<Item>>(), (acc, item) =>
+    items.GroupBy(x => x.Store).ToList().ForEach(x =>
     {
-        if (acc.ContainsKey(item.Store))
-        {
-            acc[item.Store].Add(item);
-        }
-        else
-        {
-            acc[item.Store] = new List<Item>()
-            {
-                item
-            };
-        }
-
-        return acc;
-    });
-
-    listByStore.AsEnumerable().ToList().ForEach(storeList =>
-    {
-        Console.WriteLine($"Store: {storeList.Key}");
-        storeList.Value.ForEach(item =>
+        Console.WriteLine($"Store: {x.Key}");
+        x.ToList().ForEach(item =>
         {
             Console.WriteLine($"    {item.Name}");
         });
     });
-
 }
 
 void PrintItemsAndOrderAlhpa(List<Item> items)
 {
-    var byStore = items.Aggregate(new Dictionary<StoreEnum, List<Item>>(), (acc, item) =>
+    items.OrderBy(item => item.Store.ToString()).ThenBy(item => item.Name).ToList().ForEach(i =>
     {
-        if (acc.ContainsKey(item.Store))
-        {
-            acc[item.Store].Add(item);
-        }
-        else
-        {
-            acc[item.Store] = new List<Item>()
-            {
-                item
-            };
-        }
-
-        return acc;
-    });
-
-    var listByStore = byStore.AsEnumerable().ToList();
-    listByStore.Sort((a, b) => string.Compare(a.ToString(), b.ToString()));
-    listByStore.ForEach(storeList =>
-    {
-        Console.WriteLine($"Store: {storeList.Key}");
-        var items = storeList.Value;
-        items.Sort((a, b) => string.Compare(a.Name, b.Name));
-        storeList.Value.ForEach(item =>
-        {
-            Console.WriteLine($"    {item.Name}");
-        });
+        Console.WriteLine($"Store: {i.Store} | Name: {i.Name}");
     });
 
 }
@@ -127,10 +89,10 @@ void PrintItemsOverAPrice(List<Item> items, double cost)
 }
 
 Console.WriteLine("Print Sub Totals");
-PrintSubTotal(shoppingList);
+var newList = PrintSubTotal(shoppingList);
 Console.WriteLine();
 Console.WriteLine("Grand Total");
-GrandTotalReduce(shoppingList);
+GrandTotalReduce(newList);
 Console.WriteLine();
 Console.WriteLine("Print Items in WoolWorths");
 PrintItemsInStore(shoppingList, StoreEnum.WoolWorths);

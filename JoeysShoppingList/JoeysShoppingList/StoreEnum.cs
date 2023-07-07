@@ -1,7 +1,7 @@
 ﻿using System;
 namespace JoeysShoppingList;
 
-enum StoreEnum
+public enum StoreEnum
 {
     WoolWorths,
     CostCo,

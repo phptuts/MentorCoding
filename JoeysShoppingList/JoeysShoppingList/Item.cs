@@ -1,7 +1,7 @@
 ﻿using System;
 namespace JoeysShoppingList;
 
-class Item
+public class Item
 {
 
     public Item(string name, double unitPrice, int quantity, StoreEnum store)
@@ -19,11 +19,6 @@ class Item
     public int Quantity { get; }
 
     public StoreEnum Store { get; }
-
-    public double SubTotal()
-    {
-        return UnitPrice * Quantity; ;
-    }
 }
 
 
